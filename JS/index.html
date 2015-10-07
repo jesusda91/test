@@ -55,5 +55,31 @@
 		});
 		document.getElementById('reduce').innerHTML+="<br>"+sum;
 	</script>
+	<h1>Closures</h1>
+	<div id="closures"></div>
+	<button id="btn">Click</button>
+	<script>
+		(function () {
+			document.getElementById('btn').addEventListener("click",function () {
+			console.log("click in btn");
+			});		
+
+			setTimeout(function() {
+				console.log("Hello world");
+				console.log(helloWorld("James"));
+			}, 3000);
+		})();
+
+		function helloWorld (name) {
+			function construct () {
+				name= "Bruce";
+				return "Hello "+name;
+			}
+			// console.log(name);
+			// return construct();
+			construct();
+			console.log(name);
+		}
+	</script>
 </body>
 </html>
