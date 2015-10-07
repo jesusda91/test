@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Filter</h1>
+	<div id="filter"></div>
+	<script type="text/javascript">
+		var numbers = [10, 2, 3, 5, 7, 9, 2, 15, 18];
+		var pairs = numbers.filter(function (number) {
+			return number % 2 === 0;
+		});
+		document.getElementById('filter').innerHTML=pairs;
+	</script>
+	<h2>Map</h2>
+	<div id="map"></div>
+	<script>
+		var numbers = [10, 2, 3, 5, 7, 9, 2, 15, 18];
+		// numero.map(callback);
+		/*Sin map*/
+		var squared= [];
+		for(var i=numbers.length -1; i>=0;i--){
+			var number = numbers[i];
+			squared.push(Math.pow(number,2));
+		}
+		document.getElementById('map').innerHTML="Sin map"+"<br>"+squared+"<br>";
+		var squared = numbers.map(function (element) {
+			return Math.pow(element,2);
+		});
+		document.getElementById('map').innerHTML+="Sin map"+"<br>"+squared;
+	</script>
+</body>
+</html>
