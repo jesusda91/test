@@ -14,7 +14,7 @@
 		});
 		document.getElementById('filter').innerHTML=pairs;
 	</script>
-	<h2>Map</h2>
+	<h1>Map</h1>
 	<div id="map"></div>
 	<script>
 		var numbers = [10, 2, 3, 5, 7, 9, 2, 15, 18];
@@ -30,6 +30,16 @@
 			return Math.pow(element,2);
 		});
 		document.getElementById('map').innerHTML+="Sin map"+"<br>"+squared;
+	</script>
+	<h1>ForEach</h1>
+	<div id="foreach"></div>
+	<script>
+		var numbers = [10, 2, 3, 5, 7, 9, 2, 15, 18];
+		numbers.forEach(function (element,index,array) {
+			console.log(element, index, array);
+			array[index] = Math.pow(element,2);
+		});
+		document.getElementById('foreach').innerHTML=numbers;
 	</script>
 </body>
 </html>
