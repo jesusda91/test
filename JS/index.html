@@ -41,5 +41,19 @@
 		});
 		document.getElementById('foreach').innerHTML=numbers;
 	</script>
+	<h1>Reduce</h1>
+	<div id="reduce"></div>
+	<script>
+		var chars = ["H","o","l","a"];
+		var word = chars.reduce(function (prev_value,actual_value,index,array) {
+			return prev_value + actual_value;
+		});
+		document.getElementById('reduce').innerHTML+=word;
+		var numbers = [10, 2, 3, 5, 7, 9, 2, 15, 18];
+		var sum = numbers.reduce(function (prev_value,actual_value) {
+			return prev_value+actual_value;
+		});
+		document.getElementById('reduce').innerHTML+="<br>"+sum;
+	</script>
 </body>
 </html>
